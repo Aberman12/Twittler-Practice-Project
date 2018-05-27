@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="css.css">
+    <script src="data_generator.js"></script>
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="container">
+<h1>Twittler</h1>
+<div id="twitRoom">
+</div>
+<button id="twitButton" type="button">See New Twits</button>
+    </div>
+<script>
+var change = function(event){
+  var target = event.target.id;
+
+  var addTwits2 = ()=>{
+var counter = streams.home.length-1;
+while(twitRoom.firstChild){
+  twitRoom.removeChild(twitRoom.firstChild);
+}
+    streams.home = streams.users[target];
+    var index = streams.home.length - 1;
+    while(index >= 0){
+      var tweet = streams.home[index];
+      var $tweet = $('<div></div>');
+      var getUser = $('<a onClick="change(target);"></a>');
+      $tweet.text('@' + tweet.user + ': ' + tweet.message + ' ' + tweet.created_at);
+      $tweet.attr('class', 'tweets');
+
+      $tweet.appendTo(getUser);
+      getUser.appendTo(twitRoom);
+      index -= 1;
+
+    }
+}
+addTwits2();
+};
+</script>
+<script src="app.js"></script>
+  </body>
+</html>

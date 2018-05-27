@@ -1,0 +1,21 @@
+.tweets{
+  font-size: 24px;
+  border-bottom: solid 1px black;
+  width: 600px;
+}
+
+#twitRoom{
+  margin-left: 335px;
+  padding-left:1px;
+  margin-right: 378px;
+  border: solid 1px black;
+  border-radius: 10px;
+}
+#twitButton{
+  text-align: center;
+  margin-left: 48%;
+  margin-right: 48%;
+}
+h1{
+  text-align: center;
+}
